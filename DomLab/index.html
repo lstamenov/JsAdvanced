@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul id="list">
+</ul>
+<script>
+    let parentElement = document.getElementById("list");
+    for (let i = 1; i < 5; i++) {
+        let child = document.createElement("li");
+        child.innerHTML = `Mechka nomer ${i}`;
+        parentElement.appendChild(child);
+    }
+</script>
+</body>
+</html>
