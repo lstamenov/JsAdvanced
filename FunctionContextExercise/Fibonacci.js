@@ -1,25 +1,18 @@
-function getFibonator (){
-    let lastTwoNumbers = [0, 1];
-    let count = 0;
+function Counter() {
+    let lastNumber = 1;
+    let currentNumber = 1;
 
-    function fibonacci() {
-        if (count < 2) {
-            console.log(lastTwoNumbers[count]);
-            return lastTwoNumbers[this.count++];
-        } else {
-            let newNumber = lastTwoNumbers[0] + lastTwoNumbers[1];
-            lastTwoNumbers[0] = lastTwoNumbers[1];
-            lastTwoNumbers[1] = newNumber;
-            count++;
-            return newNumber;
-        }
+    function IncreaseCounter() {
+        let newNumber = lastNumber + currentNumber;
+        lastNumber = currentNumber;
+        currentNumber = newNumber;
+        return newNumber;
     }
 
-    return fibonacci;
+    return IncreaseCounter;
 }
 
-let fib = getFibonator;
-console.log(fib());
-console.log(fib());
-console.log(fib());
-console.log(fib());
+let f = Counter();
+console.log(f());
+console.log(f());
+console.log(f());
